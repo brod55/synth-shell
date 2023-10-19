@@ -320,6 +320,17 @@ uninstallAll()
 
 
 
+##------------------------------------------------------------------------------
+##
+unattendedInstallAll()
+{
+	for script in $SCRIPTS; do
+		installScript install "${script}"
+	done
+}
+
+
+
 ##==============================================================================
 ##	MAIN
 ##==============================================================================
@@ -343,6 +354,10 @@ installerSystem()
 	case "$option" in
 		uninstall)	printInfo "Uninstalling synth-shell"
 				uninstallAll
+				printSuccess "synth-shell was uninstalled"
+				;;
+		unattended)	printInfo "Unattended installation of synth-shell"
+				unattendedInstallAll
 				printSuccess "synth-shell was uninstalled"
 				;;
 		""|install)	printInfo "Installing synth-shell"

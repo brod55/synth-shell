@@ -358,7 +358,7 @@ installerSystem()
 				;;
 		unattended)	printInfo "Unattended installation of synth-shell"
 				unattendedInstallAll
-				printSuccess "synth-shell was uninstalled"
+				printSuccess "synth-shell was installed"
 				;;
 		""|install)	printInfo "Installing synth-shell"
 				installAll
